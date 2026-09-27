@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "secure-keepass-diff"
+version = "0.1.0"
+description = "Offline, non-destructive KeePass comparison and selective merge"
+requires-python = ">=3.12"
+dependencies = ["PyKeePass==4.1.1.post1", "PySide6==6.10.3"]
+
+[project.scripts]
+secure-keepass-diff = "secure_keepass_diff.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/secure_keepass_diff"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S107"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src/secure_keepass_diff"]
+mypy_path = "src"
+exclude = ["tests"]
+
+[[tool.mypy.overrides]]
+module = "pykeepass.*"
+ignore_missing_imports = true
+

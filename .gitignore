@@ -1,0 +1,83 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# Virtual environments
+.venv/
+.venv-*/
+venv/
+env/
+ENV/
+
+# Build and packaging output
+build/
+dist/
+wheelhouse/
+*.egg-info/
+.eggs/
+*.egg
+*.spec
+
+# Test and coverage output
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+junit.xml
+.test-tmp-*/
+
+# Type checker and profiler output
+*.prof
+*.lprof
+dmypy.json
+
+# Local environment and configuration
+.env
+.env.*
+!.env.example
+config.json
+*.local.json
+
+# KeePass databases, keys, and temporary encrypted output
+*.kdbx
+*.kdb
+*.key
+*.keyx
+.secure-keepass-diff-*.kdbx
+
+# Logs, dumps, and temporary files
+*.log
+*.dump
+*.dmp
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# PyInstaller and platform packaging
+*.manifest
+*.app
+*.dmg
+*.msi
+*.exe
+
+# Editors and IDEs
+.idea/
+.vscode/
+*.code-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+

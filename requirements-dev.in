@@ -1,0 +1,8 @@
+-r requirements.in
+build==1.2.2.post1
+mypy==1.15.0
+pip-audit==2.8.0
+pip-tools==7.5.2
+pytest==9.0.3
+ruff==0.9.10
+
